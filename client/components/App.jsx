@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { Bar } from 'react-chartjs-2'
 
 const data = {
@@ -20,21 +20,23 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <h2>Bar Example (custom size)</h2>
-        <Bar
-          data={data}
-          height={200}
-          options={{
-            maintainAspectRatio: false,
-            scales: {
-              yAxes: [{
-                  ticks: {
-                      beginAtZero: true
-                    }
-                }]
-            }
-          }}
-        />
+        <div className="chart-container">
+          <h2>Bar Example (custom size)</h2>
+          <Bar
+            data={data}
+            height={200}
+            options={{
+              maintainAspectRatio: false,
+              scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                      }
+                  }]
+              }
+            }}
+          />
+        </div>
       </div>
     )
   }
